@@ -1,0 +1,94 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.header_menu {
+    display: none;
+}
+@media screen and (max-width: 370px) {
+    .header_content h1{
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .header_content p {
+        font-size: 14px;
+    }
+    .header_logo {
+        height: 100px;
+    }
+    
+}
+@media screen and (max-width: 599px) {
+    .header_logo {
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+    margin-top: 0;
+ } 
+.nav {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+.nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+.nav_item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+.header_menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+.header_menu svg {
+    width: 32px;
+    fill:  rgb(51, 10, 61);
+  }
+
+}
+
+@media screen and (min-width: 650px ) {
+    .inspire {
+        width: 100%;
+    }
+    .sub_heading {
+        width: 100%;
+        order: 1
+    }
+    .project {
+        width:50%;
+        order: 2;
+    }
+    .project_2 {
+        width: 50%;
+        order: 3
+    }
+}
+
+@media screen and (min-width: 850px) {
+    main,header, .header_inner, .nav, .content {
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    .project {
+        border-left: 1px solid #E0E0E0;
+    }
+    .project_2 {
+        border-right: 1px solid #E0E0E0;
+    }
+}

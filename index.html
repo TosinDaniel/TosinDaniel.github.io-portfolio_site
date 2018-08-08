@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tosin's Portfolio Site</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">
+            <img class="header_logo" src="images/TD.png" alt="Tosin Daniel logo">
+            <div class="header_content">
+                <h1 class="header_title"> 
+                    Tosin Daniel
+                </h1>
+                <p> Front-End Ninja</p>
+            </div>
+            <a id="menu" class="header_menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+                </svg>
+            </a> 
+        </div>
+    </header>
+
+    <nav id="drawer" class="nav">
+        <ul class="nav_list">
+            <li class="nav_item"><a href="#">Home</a></li>
+            <li class="nav_item"><a href="#">Projects</a></li>
+            <li class="nav_item"><a href="#">About </a></li>
+            <li class="nav_item"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="content">
+            <section class="inspire">
+                <article class="quote">
+                    <h3>
+                        "We are all apprentices in a craft where no one becomes a master"
+                    </h3>
+                    <p>
+                        -Ernest Hemingway
+                    </p>            
+                </article>
+            </section>
+            <h2 class="sub_heading">Featured Work</h2>
+            <section class="project">
+                <figure class="first project_sample">
+                    <img src="images/PixelArtMaker.png" alt="Pixel Art Maker">
+                    <figcaption>
+                        <a href="https://tosindaniel.github.io/">Pixel Art Maker</a>
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="project_2">
+                <figure class="second project_sample">
+                    <img src="images/TD.png" alt="Tosin Daniel logo">
+                    <figcaption>
+                         Tosin Daniel
+                    </figcaption>
+                </figure>
+            </section>
+        </section> 
+        <footer>
+                <div>
+                    © Tosin Daniel (2018)
+                </div>
+            </footer>
+    </main>
+    <script>
+        /*
+        * Open the drawer when the menu ison is clicked.
+        */
+        var menu = document.querySelector('#menu');
+        var main = document.querySelector('main');
+        var drawer = document.querySelector('.nav');
+      
+        menu.addEventListener('click', function(e) {
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+            });
+            main.addEventListener('click', function() {
+              drawer.classList.remove('open');
+            });
+      
+    </script>
+    
+</body>
